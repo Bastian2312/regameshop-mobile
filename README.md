@@ -1,6 +1,6 @@
 # regameshop-mobile
 
-<details><summary><h2>Tugas 2</h2></summary>
+<details><summary><h2>Tugas 7</h2></summary>
 
 ### Membuat sebuah program Flutter baru dengan tema E-Commerce yang sesuai dengan tugas-tugas sebelumnya.
 Generate proyek Flutter baru pada terminal dengan nama RegameshopLite
@@ -264,4 +264,51 @@ Hanya variabel yang terkait dengan data dinamis dalam sebuah stateful widget yan
 * final bisa digunakan untuk objek atau variabel yang nilainya belum tentu diketahui sebelum aplikasi berjalan.
 * Meskipun nilainya tidak dapat diubah setelah ditetapkan, final tidak memerlukan nilai yang sudah diketahui pada waktu kompilasi.
 
+</details>
+
+
+<details><summary><h2>Tugas 8</h2></summary>
+
+### Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?
+Di Flutter, const digunakan untuk membuat widget atau nilai yang tidak akan berubah. Dengan menggunakan const, Flutter bisa lebih efisien karena widget tersebut hanya akan dibuat sekali dan bisa digunakan ulang tanpa membuat objek baru setiap kali aplikasi di-rebuild.
+
+### Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+Di Flutter, Column dan Row adalah widget untuk menyusun elemen secara berurutan: Column menyusun elemen dari atas ke bawah (vertikal), sedangkan Row menyusun elemen dari kiri ke kanan (horizontal). Keduanya memiliki properti seperti mainAxisAlignment untuk mengatur posisi elemen di arah utama (vertikal pada Column dan horizontal pada Row) serta crossAxisAlignment untuk posisi elemen di arah lain. Column biasanya digunakan untuk menampilkan item seperti daftar atau paragraf yang perlu tampil secara vertikal, sementara Row cocok untuk elemen yang sejajar di satu baris seperti ikon atau tombol. 
+
+Contoh Column
+```
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Text("Item 1"),
+    Text("Item 2"),
+    Text("Item 3"),
+  ],
+)
+```
+
+Contoh Row
+```
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceAround,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Icon(Icons.home),
+    Icon(Icons.star),
+    Icon(Icons.settings),
+  ],
+)
+```
+
+### Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+saya menggunakan beberapa elemen input utama dari Flutter, yaitu TextFormField untuk memasukkan data seperti nama produk (_name), deskripsi produk (_description), dan jumlah produk (_amount).
+
+Selain elemen input yang digunakan, ada elemen input lain yang disediakan Flutter tetapi tidak saya gunakan dalam form ini, seperti Checkbox, Switch, Slider, Radio, dan DropdownButton. Elemen-elemen ini bisa berguna dalam berbagai konteks. Misalnya, Checkbox dan Switch dapat digunakan untuk pilihan boolean, Slider untuk memilih nilai dalam rentang tertentu, Radio untuk memilih satu opsi dari beberapa pilihan, dan DropdownButton untuk menampilkan daftar pilihan dalam bentuk dropdown.
+
+### Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+Dalam aplikasi Flutter, tema diatur dengan menggunakan properti theme pada widget MaterialApp. Untuk menciptakan konsistensi tampilan, kita bisa mendefinisikan warna utama, skema warna, serta gaya teks (seperti font dan ukuran) di dalam ThemeData. Dengan begitu, elemen-elemen di aplikasi akan mengikuti aturan yang sama, sehingga tampilannya menjadi konsisten di seluruh aplikasi.
+
+###  Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+Dalam Flutter, navigasi antar halaman diatur menggunakan Navigator, yang memungkinkan kita untuk berpindah antar layar (atau widget halaman) menggunakan metode seperti push, pop, dan pushReplacement. Untuk aplikasi dengan banyak halaman, setiap kali kita ingin membuka halaman baru, kita dapat menggunakan Navigator.push untuk menambah halaman ke tumpukan (stack) navigasi, sehingga halaman sebelumnya tetap ada di latar belakang. Sebaliknya, Navigator.pop digunakan untuk kembali ke halaman sebelumnya dengan menghapus halaman terkini dari tumpukan.
 </details>
