@@ -266,8 +266,11 @@ Hanya variabel yang terkait dengan data dinamis dalam sebuah stateful widget yan
 
 </details>
 
-
 <details><summary><h2>Tugas 8</h2></summary>
+
+</details>
+
+<details><summary><h2>Tugas 9</h2></summary>
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
 
